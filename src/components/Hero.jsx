@@ -1,9 +1,13 @@
 import React from 'react';
 import { Scale, ShieldAlert, Sparkles, TrendingUp, CheckCircle2, FileCheck, AlertTriangle } from 'lucide-react';
+import ParticlesCanvas from './ParticlesCanvas';
 
 export default function Hero({ onOpenCab, onScrollToScanner }) {
   return (
-    <section className="relative pt-12 pb-16 overflow-hidden">
+    <section className="relative pt-16 pb-20 overflow-hidden">
+      {/* Interactive WebGL / Casberry Canvas Simulation */}
+      <ParticlesCanvas color="6, 182, 212" particleCount={50} connectionDistance={120} />
+
       {/* Background Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-gradient-to-r from-sky-600/15 via-blue-600/10 to-indigo-600/15 blur-[125px] pointer-events-none rounded-full" />
 

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import OutcomeChart from './components/OutcomeChart';
 import ContractScannerStudio from './components/ContractScannerStudio';
 import CabModal from './components/CabModal';
 import Footer from './components/Footer';
@@ -28,6 +29,9 @@ export default function App() {
           onOpenCab={() => setIsCabOpen(true)}
           onScrollToScanner={scrollToScanner}
         />
+
+        {/* Bklit UI + Julien Bek $1 vs $6 Sequoia Framework */}
+        <OutcomeChart onCtaClick={() => setIsCabOpen(true)} />
 
         {/* Interactive Contract Scanner Studio */}
         <ContractScannerStudio />
